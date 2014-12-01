@@ -70,7 +70,7 @@ function cardFlip(card,value){
 				}
 			// when no pair is found
 			} else {
-				function flipBack(){
+				function flipCardBack(){
 				    // Flip the 2 tiles back over
 				    var card1 = document.getElementById(cardIdArr[0]);
 				    var card2 = document.getElementById(cardIdArr[1]);
@@ -82,7 +82,7 @@ function cardFlip(card,value){
             		cardIdArr = [];
 				}
 				// timer for flip
-				setTimeout(flipBack, 500);
+				setTimeout(flipCardBack, 500);
 			}
 		}
 	}
