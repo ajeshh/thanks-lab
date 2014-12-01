@@ -44,15 +44,15 @@ function newGame() {
 	
 //when card flips
 function cardFlip(card,value){
-	if(card.innerHTML == "" && openPairArr.length < 2){
+	if(card.innerHTML === "" && openPairArr.length < 2){
 		card.style.background = '#18c1fd';
 		card.innerHTML = value;
-		if(openPairArr.length == 0){
+		if(openPairArr.length === 0){
 			openPairArr.push(value);
 			cardIdArr.push(card.id);
 			turn++;
 		//Card 2 open 
-		} else if(openPairArr.length == 1){
+		} else if(openPairArr.length === 1){
 			openPairArr.push(value);
 			cardIdArr.push(card.id);
 			turn++;
@@ -63,7 +63,7 @@ function cardFlip(card,value){
             	cardIdArr = [];
 				
 				// Game over
-				if(cardsOpen == cardArr.length){
+				if(cardsOpen === cardArr.length){
 					alert("GOOD JOB! It took you " + turn + " turns to get it. Let's Play Again!");
 					document.getElementById('game').innerHTML = "";
 					newGame();
@@ -71,7 +71,6 @@ function cardFlip(card,value){
 			// when no pair is found
 			} else {
 				function flipCardBack(){
-				    // Flip the 2 tiles back over
 				    var card1 = document.getElementById(cardIdArr[0]);
 				    var card2 = document.getElementById(cardIdArr[1]);
 				    card1.style.background = "repeating-linear-gradient(-45deg, #13315c, #13315c 5px, white 5px, white 10px)";
